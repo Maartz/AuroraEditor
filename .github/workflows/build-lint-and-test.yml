@@ -66,7 +66,7 @@ jobs:
         run: |
           set -o pipefail
           xcodebuild -resolvePackageDependencies
-          xcodebuild -quiet -workspace "Aurora Editor.xcworkspace" -scheme "Aurora Editor" clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+          xcodebuild -workspace "Aurora Editor.xcworkspace" -scheme "Aurora Editor" clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
   run_tests:
     runs-on: self-hosted
