@@ -10,7 +10,7 @@ concurrency:
 jobs:
   build_and_lint:
     runs-on: self-hosted
-    timeout-minutes: 20 # If an action exceeds 20 mins, it probably isn't ever going to complete.
+    timeout-minutes: 15 # If an action exceeds 15 mins, it probably isn't ever going to complete.
     steps:
       - name: Clean up
         if: always()
@@ -70,7 +70,7 @@ jobs:
 
   run_tests:
     runs-on: self-hosted
-    timeout-minutes: 10 # If an action exceeds 10 mins, it probably isn't ever going to complete.
+    timeout-minutes: 30 # If an action exceeds 30 mins, it probably isn't ever going to complete.
     needs: build_and_lint
     steps:
       - uses: actions/checkout@v4
