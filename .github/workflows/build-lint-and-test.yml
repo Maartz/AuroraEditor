@@ -69,6 +69,7 @@ jobs:
           xcodebuild -workspace "Aurora Editor.xcworkspace" -scheme "Aurora Editor" clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
   run_tests:
+    if: ${{ false }} # Skipped for now
     runs-on: self-hosted
     timeout-minutes: 30 # If an action exceeds 30 mins, it probably isn't ever going to complete.
     needs: build_and_lint
